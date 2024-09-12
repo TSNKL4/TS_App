@@ -1,0 +1,252 @@
+/* การตั้งค่าสีพื้นหลังและการตั้งค่าทั่วไป */
+body, html {
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #000000;
+  color: white;
+  overflow-x: hidden; /* ป้องกันการเลื่อนในแนวนอน */
+}
+
+/* ปุ่ม Join Squad */
+.join-squad-btn {
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 50px;
+  background-color: #00b4d8;
+  color: white;
+  font-size: 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+.join-squad-btn:hover {
+  background-color: #0096c7;
+}
+
+/* การจัดวางหลัก */
+.bg-dark {
+  background-color: #000000;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.min-h-screen {
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative; /* เพิ่ม position relative */
+}
+
+/* การจัดการพื้นหลัง */
+
+.BG-display{
+  position: absolute;
+  top: 66%; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+  left: 50%; /* จัดให้อยู่กึ่งกลางแนวนอน */
+  width: 70%;
+  height: 10%;
+  object-fit: cover;
+  transform: translate(-50%, -50%); /* เลื่อนภาพไปตรงกลางทั้งสองแกน */
+  z-index: 1;
+}
+
+
+/* ส่วนของรูป Logo */
+.logo-section {
+  text-align: center;
+  margin-bottom: 8px;
+  position: relative;
+  top: -20px;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+}
+
+/* ส่วนแสดงยอดคงเหลือ */
+.balance-display {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  border-radius: 16px;
+  max-width: 150px;
+  margin-bottom: 10px;
+  margin-top: -20px;
+  text-align: center;
+}
+
+/* ส่วนของปุ่มขุด */
+.farming-button-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 16px;
+  max-width: 300px;
+  background-color: #333;
+  border-radius: 16px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* ปุ่มกดขุด */
+.start-farming-btn {
+  padding: 9px 18px;
+  background-color: #646363;
+  border: none;
+  border-radius: 8px;
+  color: rgb(255, 250, 250);
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.start-farming-btn:hover {
+  background-color: #939393;
+}
+
+/* ข้อความนับถอยหลัง */
+.countdown {
+  font-size: 14px;
+  margin-top: 8px;
+  color: #aaa;
+}
+
+/* ปุ่มเพิ่มกำลังขุด */
+.boost-btn {
+  margin-top: 12px;
+  padding: 9px 18px;
+  background-color: #0096c7;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  width: 100%;
+  max-width: 300px;
+}
+
+.boost-btn:hover {
+  background-color: #00b4d8;
+}
+
+/* รูปภาพตัวละคร */
+.character-img {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: 190%;
+  margin-bottom: 0.1rem;
+  position: relative;
+  z-index: 1;
+}
+
+.character-img img {
+  width: 150px;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ส่วนแสดงพลังงาน */
+.energy-display {
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -210px;
+}
+
+/* รูปเหรียญ */
+.coin-img {
+  width: 50px;
+  height: 50px;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-top: -390px;
+}
+
+.small-timer {
+  color: #aaa;
+  margin-left: 1px;
+  margin-top: -390px;
+}
+
+/* เอฟเฟกต์ Rolling สำหรับจำนวนการขุด */
+.farming-amount {
+  display: inline-block;
+  font-size: 18px;
+  color: white;
+  animation: rollUp 0.5s ease-in-out infinite;
+}
+
+@keyframes rollUp {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* ส่วนของเมนูด้านล่าง */
+.footer {
+  background-color: #222;
+  display: flex;
+  justify-content: space-around;
+  padding: 8px 0;
+  border-top: none;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+}
+
+.footer button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.footer button img {
+  width: 24px;
+  height: 24px;
+  margin-bottom: 4px;
+}
+
+.footer button:hover {
+  color: #00b4d8;
+}
